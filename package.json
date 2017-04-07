@@ -1,0 +1,48 @@
+{
+  "name": "metalsmith-collections-archive",
+  "version": "1.0.0",
+  "description": "Generate archive metadata and directories for Metalsmith collections.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp",
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yanneves/metalsmith-collections-archive.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "filename",
+    "collection",
+    "archive"
+  ],
+  "author": "Yann Eves (hello@yanneves.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yanneves/metalsmith-collections-archive/issues"
+  },
+  "homepage": "https://github.com/yanneves/metalsmith-collections-archive#readme",
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "chai": "^3.5.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-jscs": "^4.0.0",
+    "gulp-mocha": "^4.0.1",
+    "metalsmith": "^2.3.0",
+    "metalsmith-collections": "^0.9.0"
+  },
+  "peerDependencies": {
+    "metalsmith-collections": "^0.9.0"
+  },
+  "dependencies": {
+    "debug": "^2.6.3",
+    "incognito": "^0.1.4",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "no-console": 1
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  }
+}
