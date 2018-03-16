@@ -90,7 +90,7 @@ metalsmith.use(archiveCollections({
 ### Example layout
 
 ```html
-<!-- archive.hbs -->
+<!-- layout.html -->
 
 <article>
   {{#if children}}
