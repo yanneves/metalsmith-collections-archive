@@ -87,6 +87,34 @@ metalsmith.use(archiveCollections({
 }))
 ```
 
+### Example layout
+
+```html
+<!-- archive.hbs -->
+
+<article>
+  {{#if children}}
+    <section>
+      <ul>
+        {{#each children}}
+          <li><a href="/{{ path }}" title="{{ title }}">{{ title }}</li>
+        {{/each}}
+      </ul>
+    </section>
+  {{/if}}
+  <section>
+    {{#unless children}}
+      <h2>{{ title }}</h2>
+    {{/unless}}
+    <ul>
+      {{#each posts}}
+        <li><a href="/{{ path }}" title="{{ title }}">{{ title }}</li>
+      {{/each}}
+    </ul>
+  </section>
+</article>
+```
+
 ## Combine with a sitemap plugin (recommended!)
 
 ```javascript

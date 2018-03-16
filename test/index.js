@@ -3,6 +3,7 @@
 const { every, flatMap, values, isArray } = require('lodash')
 const metalsmith = require('metalsmith')
 const collections = require('metalsmith-collections')
+const layouts = require('metalsmith-layouts')
 
 const { expect } = require('chai')
 const equal = require('assert-dir-equal')
@@ -496,6 +497,26 @@ describe(name, () => {
         .use(plugin({
           layout: 'archive.html',
           collections: false
+        }))
+        .build(err => {
+          if (err) return done(err)
+          equal(`${fixtures}build`, `${fixtures}expected`)
+          done()
+        })
+    })
+  })
+
+  describe('Layouts', () => {
+    const fixtures = 'test/fixtures/layouts/'
+
+    it('should use defined layout', done => {
+      metalsmith(fixtures)
+        .use(collections())
+        .use(plugin({
+          layout: 'archive.hbs'
+        }))
+        .use(layouts({
+          default: 'default.hbs'
         }))
         .build(err => {
           if (err) return done(err)
